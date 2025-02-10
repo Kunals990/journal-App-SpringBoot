@@ -11,6 +11,7 @@ import java.util.Date;
 
 @Document(collection = "journal_entries")
 @Data
+@NoArgsConstructor
 public class JournalEntry {
     //pojo class - plain old java entry
     @Id
