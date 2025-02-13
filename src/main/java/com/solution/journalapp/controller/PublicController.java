@@ -1,7 +1,6 @@
 package com.solution.journalapp.controller;
 
 import com.solution.journalapp.entity.User;
-import com.solution.journalapp.repository.UserRepository;
 import com.solution.journalapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +20,6 @@ public class PublicController {
 
     @PostMapping("/create-user")
     public void createUser(@RequestBody User user){
-        userService.saveEntry(user);
+        userService.saveNewUser(user);
     }
 }

@@ -6,7 +6,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 
 @Document(collection = "journal_entries")
@@ -22,7 +21,9 @@ public class JournalEntry {
 
     private String content;
 
-    private LocalDateTime date;
+    private LocalDateTime created_date;
+
+    private LocalDateTime modified_date=null;
 
 
 }
