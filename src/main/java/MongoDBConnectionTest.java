@@ -6,7 +6,7 @@ import com.mongodb.client.MongoDatabase;
 
 public class MongoDBConnectionTest {
     public static void main(String[] args) {
-        String uri = "mongodb+srv://kunalsable9990:2Cr5csfBuMTzrCFK@cluster0.pbdsl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+        String uri = "mongodb+srv://kunalsable990:1234@cluster0.pbdsl.mongodb.net/journalDB?retryWrites=true&w=majority&appName=Cluster0";
 
         try (MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("journalDB");
