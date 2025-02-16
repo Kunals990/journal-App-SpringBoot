@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 
 
 @Document(collection = "journal_entries")
-@Data
 @NoArgsConstructor
 public class JournalEntry {
     //pojo class - plain old java entry
@@ -25,5 +24,43 @@ public class JournalEntry {
 
     private LocalDateTime modified_date=null;
 
+    public ObjectId getId() {
+        return id;
+    }
 
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
+    public @NonNull String getTitle() {
+        return title;
+    }
+
+    public void setTitle(@NonNull String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public LocalDateTime getCreated_date() {
+        return created_date;
+    }
+
+    public void setCreated_date(LocalDateTime created_date) {
+        this.created_date = created_date;
+    }
+
+    public LocalDateTime getModified_date() {
+        return modified_date;
+    }
+
+    public void setModified_date(LocalDateTime modified_date) {
+        this.modified_date = modified_date;
+    }
 }

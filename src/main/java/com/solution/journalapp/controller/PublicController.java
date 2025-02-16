@@ -35,11 +35,6 @@ public class PublicController {
         return "OK";
     }
 
-    @PostMapping("/create-user")
-    public void createNewUser(@RequestBody User user){
-        userService.saveNewUser(user);
-    }
-
     @PostMapping("/signup")
     public void signup(@RequestBody User user){
         userService.saveNewUser(user);

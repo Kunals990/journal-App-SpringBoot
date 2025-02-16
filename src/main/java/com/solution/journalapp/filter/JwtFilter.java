@@ -28,6 +28,10 @@ public class JwtFilter  extends OncePerRequestFilter{
         String authorizationHeader = request.getHeader("Authorization");
         String username = null;
         String jwt = null;
+        if (authorizationHeader != null && authorizationHeader.startsWith("Basic ")) {
+            chain.doFilter(request, response);
+            return; // Skip JWT validation for Basic Auth requests
+        }
         if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
             jwt = authorizationHeader.substring(7);
             username = jwtUtil.extractUsername(jwt);
